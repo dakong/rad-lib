@@ -45,6 +45,7 @@ export default class Navbar extends React.Component <Props, State> {
 
 
 const NavbarComponent = styled.nav`
+  z-index: 999999;
   position: absolute;
   top: 0;
   left:0;

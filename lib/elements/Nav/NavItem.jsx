@@ -16,6 +16,7 @@ const NavItem = styled.li`
   display: inline;
   padding-left: 16px;
   cursor: pointer;
+  user-select: none;
 
   @media (max-width: 600px) {
     padding-left: 0;
