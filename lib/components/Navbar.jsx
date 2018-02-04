@@ -8,6 +8,7 @@ import NavList from '../elements/Nav/NavList';
 
 type Props = {
   children?: React.Node,
+  fixed: boolean,
 }
 
 type State = {
@@ -15,9 +16,14 @@ type State = {
 }
 
 export default class Navbar extends React.Component <Props, State> {
+
+  static defaultProps = {
+    fixed: false,
+  };
+
   state = {
     open: false,
-  }
+  };
 
   onContextMenuClick = () => {
     this.setState ({
@@ -27,7 +33,7 @@ export default class Navbar extends React.Component <Props, State> {
 
   render() {
     return (
-      <NavbarComponent>
+      <NavbarComponent fixed={this.props.fixed}>
         <ContextMenuWrapper>
           <ContextMenu
             onClick={()=>this.onContextMenuClick()}
@@ -42,11 +48,16 @@ export default class Navbar extends React.Component <Props, State> {
   }
 };
 
-
+function isFixed({ fixed }) {
+  if (fixed){
+    return 'fixed';
+  }
+  return 'absolute';
+}
 
 const NavbarComponent = styled.nav`
   z-index: 999999;
-  position: absolute;
+  position: ${ isFixed };
   top: 0;
   left:0;
   width: 100%;

@@ -1,6 +1,6 @@
 {
   "name": "rad-lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple component library for react",
   "main": "build/index.js",
   "scripts": {
