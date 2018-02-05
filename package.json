@@ -1,6 +1,6 @@
 {
   "name": "rad-lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple component library for react",
   "main": "build/index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
+    "babel-plugin-polished": "^1.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
